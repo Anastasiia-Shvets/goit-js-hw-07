@@ -38,6 +38,7 @@ images.forEach(image => {
 
   imgElem.src = image.url;
   imgElem.alt = image.alt;
+  imgElem.style.listStyleType = 'none';
   imgElem.style.width = '360px';
   imgElem.style.height = 'auto';
   imgElem.style.padding = '20px';

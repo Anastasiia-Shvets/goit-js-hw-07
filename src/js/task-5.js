@@ -3,6 +3,10 @@ const divElem = document.querySelector(".widget");
 const spanElem = document.querySelector(".color");
 const btnChange = document.querySelector('button');
 
+console.log(divElem);
+console.log(spanElem);
+console.log(btnChange);
+
 btnChange.addEventListener("click", onBtnClick);
 spanElem.addEventListener("click", onSpanClick);
 

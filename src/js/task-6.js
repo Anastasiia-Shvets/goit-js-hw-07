@@ -5,6 +5,11 @@ const btnCreate = document.querySelector("button[data-create]");
 const btnDestroy = document.querySelector("button[data-destroy");
 const boxesContainer = document.querySelector("#boxes");
 
+console.log(inputNumb);
+console.log(btnCreate);
+console.log(btnDestroy);
+console.log(boxesContainer);
+
 btnCreate.addEventListener('click', onCreateClick);
 btnDestroy.addEventListener('click', onDestroyClick);
 

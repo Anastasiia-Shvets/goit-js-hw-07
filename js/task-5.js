@@ -11,13 +11,13 @@ btnChange.addEventListener("click", onBtnClick);
 spanElem.addEventListener("click", onSpanClick);
 
 function onBtnClick() {
-  const randomColor = getRandomHexColor();
-  document.body.style.backgroundColor = randomColor;
-  spanElem.textContent = randomColor;
+    const randomColor = getRandomHexColor();
+    document.body.style.backgroundColor = randomColor;
+    spanElem.textContent = randomColor;
 }
 
 function onSpanClick() {
-  
+    
 }
 
 function getRandomHexColor() {

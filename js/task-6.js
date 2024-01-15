@@ -14,30 +14,30 @@ btnCreate.addEventListener('click', onCreateClick);
 btnDestroy.addEventListener('click', onDestroyClick);
 
 function onCreateClick() {
-  const amount = parseInt(inputNumb.value);
+    const amount = parseInt(inputNumb.value);
 
-  if (isNaN(amount) || amount < 1 || amount > 100) {
+    if (isNaN(amount) || amount < 1 || amount > 100) {
     alert('Please enter a number between 1 and 100.');
     return;
-  }
-  createBoxes(amount);
+    }
+    createBoxes(amount);
 }
 function onDestroyClick() {
-  destroyBoxes();
+    destroyBoxes();
 }
 
 function destroyBoxes() {
-  boxesContainer.innerHTML = "";
+    boxesContainer.innerHTML = "";
 }
 
 function createBoxes(amount) {
-  for (let i = 0; i < amount; i++) {
+    for (let i = 0; i < amount; i++) {
     const divElem = document.createElement("div");
     divElem.style.width = `${30 + i * 10}px`;
     divElem.style.height = `${30 + i * 10}px`;
     divElem.style.backgroundColor = getRandomHexColor();
     boxesContainer.appendChild(divElem);
-  }
+    }
 }
 
 function getRandomHexColor() {

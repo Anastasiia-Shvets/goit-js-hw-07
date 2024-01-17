@@ -31,20 +31,18 @@ const images = [
 ];
 
 const galleryElem = document.querySelector('.gallery');
-
+const imagesObj = [];
 images.forEach(image => {
-    const liElem = document.createElement('li');
+    
     const imgElem = document.createElement('img');
 
     imgElem.src = image.url;
     imgElem.alt = image.alt;
-    imgElem.style.listStyleType = 'none';
-    imgElem.style.width = '360px';
-    imgElem.style.height = 'auto';
-    imgElem.style.padding = '20px';
-    imgElem.style.display = 'flex';
-
-    liElem.appendChild(imgElem);
-    galleryElem.appendChild(liElem);
+    
+    imagesObj.push(imgElem);
+    
 });
-console.log(galleryElem);
+
+const liElem = document.createElement("li");
+liElem.append(...imagesObj);
+galleryElem.append(liElem);

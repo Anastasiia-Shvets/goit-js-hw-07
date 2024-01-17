@@ -31,18 +31,8 @@ const images = [
 ];
 
 const galleryElem = document.querySelector('.gallery');
-const imagesObj = [];
-images.forEach(image => {
-    
-    const imgElem = document.createElement('img');
+const galleryItemsHTML = images.map((image) => {
+    return `<li><img src="${image.url}" alt="${image.alt}" width=360></li>`;
+}).join("");
 
-    imgElem.src = image.url;
-    imgElem.alt = image.alt;
-    
-    imagesObj.push(imgElem);
-    
-});
-
-const liElem = document.createElement("li");
-liElem.append(...imagesObj);
-galleryElem.append(liElem);
+galleryElem.innerHTML = galleryItemsHTML;
